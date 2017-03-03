@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>FoldScroll</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+        <link href="https://fonts.googleapis.com/css?family=Play:400,700" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="css/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    </head>
+    <body>
+        <section id="info">
+          <h1>Demo foldscroll event</h1>
+          
+        </section>
+        <section class="quotes"></section>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+        <script src="js/foldscroll.js"></script>
+        <script src="js/quotes.js"></script>
+        <script type="text/javascript">
+
+            $(function() {
+
+                var limit = 15;
+                var $container = $( '.quotes' );
+
+                // Populate
+                for ( var i = 0, n = Math.min( limit, quotes.length ); i < n; i++ ) {
+
+                    $container.append(
+                        '<article>' +
+                            '<div class="bck">'+
+                            '<p>' + 
+
+                            /*quotes[i].quote */
+                            "Nom de l'event"
+
+                            + '</p>' +
+                            '<em>' + 
+                            /*quotes[i].author*/
+                            "description de l'event" 
+                            + '</em>' +
+                            '<br>'+
+                            '<button class="button">réserver</button>'+
+                            '<button class="button2">Acheter</button>'+
+                            '</div>'+
+                        '</article>');
+                }
+
+
+
+                // Call the foldscroll plugin
+                $container.foldscroll({
+                    perspective: 200,
+                    margin: '220px'
+                });
+            });
+
+        </script>
+    </body>
+</html>
