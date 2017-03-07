@@ -49,10 +49,17 @@
 
 
                 // Call the foldscroll plugin
-                $container.foldscroll({
-                    perspective: 200,
-                    margin: '220px'
-                });
+                   $container.foldscroll({
+        
+        // Perspective to apply to rotating elements
+        perspective: 900,
+    
+        // Default shading to apply (null => no shading)
+        shading: 'rgba(0,0,0,0.2)',
+        
+        // Area of rotation (fraction or pixel value)
+        margin: 0.6
+    });
             });
 
         </script>
